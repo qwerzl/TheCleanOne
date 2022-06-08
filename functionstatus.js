@@ -19,8 +19,8 @@ if ($trigger == "button") {
 $done({
     title:"Surge",
     content:"Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
-    icon: icon_s?"checkmark.seal":"exclamationmark.triangle",
-   "icon-color":icon_s?"#16A951":"#FF7500"
+    icon: icon_s?"network":"exclamationmark.triangle",
+   "icon-color":icon_s?"#485a6c":"#FF7500"
 });
 })();
 function icon_status(status){
