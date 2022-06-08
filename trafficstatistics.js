@@ -57,7 +57,7 @@ if(net=="en0") {
 
 
   $done({
-      title:"流量统计 | "+netType,
+      title:netType,
       content:`${upload} | ${download}`,
 		icon: params.icon,
 		  "icon-color":params.color
