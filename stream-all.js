@@ -38,7 +38,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="D+: \u2611"+region.toUpperCase()+' |'
+        disney_result="D+: \u2611 "+region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
@@ -97,7 +97,7 @@ panel_result['content'] = content
         if (code === 'Not Available') {
           youtube_check_result += '🚫'
         } else {
-          youtube_check_result += "\u2611 "+code.toUpperCase()
+          youtube_check_result += "\u2611 "+code.toUpperCase()+' |'
         }
       })
       .catch((error) => {
@@ -153,7 +153,7 @@ panel_result['content'] = content
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += '\u2611 '+code.toUpperCase()
+        netflix_check_result += '\u2611 '+code.toUpperCase()+' |'
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
