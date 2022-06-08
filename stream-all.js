@@ -42,9 +42,9 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
-        disney_result="D+: 🚫 "
+        disney_result="D+: \u2612"
       } else if (status==STATUS_TIMEOUT) {
-        disney_result="D+: 🚦"
+        disney_result="D+: N/A"
       }
 result.push(disney_result)
 console.log(result)
@@ -95,13 +95,13 @@ panel_result['content'] = content
     await inner_check()
       .then((code) => {
         if (code === 'Not Available') {
-          youtube_check_result += '🚫'
+          youtube_check_result += '\u2612 |'
         } else {
           youtube_check_result += "\u2611"+code.toUpperCase()+' |'
         }
       })
       .catch((error) => {
-        youtube_check_result += '❓'
+        youtube_check_result += 'N/A'
       })
   
     return youtube_check_result
@@ -161,7 +161,7 @@ panel_result['content'] = content
           return Promise.reject('Not Available')
         }
   
-        netflix_check_result += '⚠️ ' + code.toUpperCase()
+        netflix_check_result += '⚠ ' + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .catch((error) => {
@@ -169,10 +169,10 @@ panel_result['content'] = content
           return
         }
         if (error === 'Not Available') {
-          netflix_check_result += '🚫'
+          netflix_check_result += '\u2612'
           return
         }
-        netflix_check_result += '❓'
+        netflix_check_result += 'N/A'
       })
   
     return netflix_check_result
