@@ -17,7 +17,7 @@ if ($trigger == "button") {
 	$notification.post("配置重载","配置重载成功","")
 };
 $done({
-    title:"Surge",
+    title:startTime,
     content:"",
     icon: icon_s?"network":"exclamationmark.triangle",
    "icon-color":icon_s?"#485a6c":"#FF7500"
