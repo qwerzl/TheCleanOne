@@ -18,7 +18,7 @@ if ($trigger == "button") {
 };
 $done({
     title:startTime,
-    content:"",
+    content:"/n",
     icon: icon_s?"network":"exclamationmark.triangle",
    "icon-color":icon_s?"#485a6c":"#FF7500"
 });
